@@ -249,8 +249,9 @@ function App() {
     const isPopupOpened =
       isEditProfilePopupOpen ||
       isEditAvatarPopupOpen ||
-      isEditProfilePopupOpen ||
-      isInfoTooltipOpen;
+      isAddPlacePopupOpen ||
+      isInfoTooltipOpen ||
+      selectedCard;
     if (!isPopupOpened) {
       return;
     }
