@@ -155,11 +155,9 @@ function App() {
       .then((data) => {
         if (data.token) {
           localStorage.setItem("jwt", data.token);
+          setIsLoggedIn(true);
+          history.push("/");
         }
-      })
-      .then(() => {
-        setIsLoggedIn(true);
-        history.push("/");
       })
       .catch(() => console.log("something went wrong"))
       .finally(() => {
